@@ -14,6 +14,7 @@ local main = function()
   require("plugins")
 
   vim.cmd("colorscheme " .. config.ui.colorscheme)
+  vim.cmd('set guifont="SauceCodePro Nerd Font:18"')
 end
 
 main()
