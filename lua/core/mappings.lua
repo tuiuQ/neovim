@@ -90,7 +90,7 @@ M.telescope_media = function()
 end
 
 M.codeRunner = function()
-  map.n("<C-A-n>", ":lua require('CodeRunner').run()<CR>")
+  map.n("<F5>", ":lua require('CodeRunner').run()<CR>")
   map.n("<C-space>", ":lua require'CodeRunner'.show()<CR>")
   map.n("<C-space>", "<C-\\><C-n>:lua require'CodeRunner'.hide()<CR>")
 end

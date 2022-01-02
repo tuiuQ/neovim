@@ -70,7 +70,7 @@ time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
   ["CodeRunner.nvim"] = {
-    config = { "\27LJ\2\n-\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0\14luafile %\bcmd\bvimí\1\1\0\5\0\f\0\0156\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\6\0005\3\3\0003\4\4\0=\4\5\3=\3\a\0025\3\b\0005\4\t\0=\4\n\3=\3\v\2B\0\2\1K\0\1\0\nstyle\vlayout\1\0\4\6x\4\0€€€ÿ\3\vheight\4š³æÌ\t™³¦ÿ\3\6y\4\0€€€ÿ\3\nwidth\4š³æÌ\t™³¦ÿ\3\1\0\2\fbgcolor\tNONE\vborder\frounded\ntasks\1\0\0\blua\0\1\0\2\vpython\18python <file>\6c\tmake\nsetup\15CodeRunner\frequire\0" },
+    config = { "require('plugins.configs.others').codeRunner()" },
     loaded = true,
     needs_bufread = false,
     path = "/Users/tuiu/.local/share/nvim/site/pack/packer/opt/CodeRunner.nvim",
@@ -316,7 +316,7 @@ _G.packer_plugins = {
     url = "https://github.com/kyazdani42/nvim-tree.lua"
   },
   ["nvim-treesitter"] = {
-    after = { "nvim-ts-hint-textobject", "nvim-ts-rainbow", "nvim-treesitter-textobjects", "nvim-treesitter-context", "nvim-ts-context-commentstring", "nvim-gps" },
+    after = { "nvim-gps", "nvim-ts-rainbow", "nvim-treesitter-textobjects", "nvim-treesitter-context", "nvim-ts-context-commentstring", "nvim-ts-hint-textobject" },
     config = { "require('plugins.configs.treesitter')" },
     loaded = false,
     needs_bufread = true,
@@ -424,34 +424,6 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Setup for: Comment.nvim
-time([[Setup for Comment.nvim]], true)
-try_loadstring("\27LJ\2\n=\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\fcomment\18core.mappings\frequire\0", "setup", "Comment.nvim")
-time([[Setup for Comment.nvim]], false)
-time([[packadd for Comment.nvim]], true)
-vim.cmd [[packadd Comment.nvim]]
-time([[packadd for Comment.nvim]], false)
--- Setup for: bufferline.nvim
-time([[Setup for bufferline.nvim]], true)
-try_loadstring("\27LJ\2\n@\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\15bufferline\18core.mappings\frequire\0", "setup", "bufferline.nvim")
-time([[Setup for bufferline.nvim]], false)
-time([[packadd for bufferline.nvim]], true)
-vim.cmd [[packadd bufferline.nvim]]
-time([[packadd for bufferline.nvim]], false)
--- Setup for: nvim-tree.lua
-time([[Setup for nvim-tree.lua]], true)
-try_loadstring("\27LJ\2\n>\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\rnvimtree\18core.mappings\frequire\0", "setup", "nvim-tree.lua")
-time([[Setup for nvim-tree.lua]], false)
-time([[packadd for nvim-tree.lua]], true)
-vim.cmd [[packadd nvim-tree.lua]]
-time([[packadd for nvim-tree.lua]], false)
--- Setup for: CodeRunner.nvim
-time([[Setup for CodeRunner.nvim]], true)
-try_loadstring("\27LJ\2\n@\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\15codeRunner\18core.mappings\frequire\0", "setup", "CodeRunner.nvim")
-time([[Setup for CodeRunner.nvim]], false)
-time([[packadd for CodeRunner.nvim]], true)
-vim.cmd [[packadd CodeRunner.nvim]]
-time([[packadd for CodeRunner.nvim]], false)
 -- Setup for: telescope.nvim
 time([[Setup for telescope.nvim]], true)
 try_loadstring("\27LJ\2\n?\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\14telescope\18core.mappings\frequire\0", "setup", "telescope.nvim")
@@ -459,13 +431,6 @@ time([[Setup for telescope.nvim]], false)
 time([[packadd for telescope.nvim]], true)
 vim.cmd [[packadd telescope.nvim]]
 time([[packadd for telescope.nvim]], false)
--- Setup for: telescope-media-files.nvim
-time([[Setup for telescope-media-files.nvim]], true)
-try_loadstring("\27LJ\2\nE\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\20telescope_media\18core.mappings\frequire\0", "setup", "telescope-media-files.nvim")
-time([[Setup for telescope-media-files.nvim]], false)
-time([[packadd for telescope-media-files.nvim]], true)
-vim.cmd [[packadd telescope-media-files.nvim]]
-time([[packadd for telescope-media-files.nvim]], false)
 -- Setup for: lazygit.nvim
 time([[Setup for lazygit.nvim]], true)
 try_loadstring("\27LJ\2\n=\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\flazygit\18core.mappings\frequire\0", "setup", "lazygit.nvim")
@@ -473,30 +438,65 @@ time([[Setup for lazygit.nvim]], false)
 time([[packadd for lazygit.nvim]], true)
 vim.cmd [[packadd lazygit.nvim]]
 time([[packadd for lazygit.nvim]], false)
--- Config for: Comment.nvim
-time([[Config for Comment.nvim]], true)
-try_loadstring("\27LJ\2\n5\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\fComment\frequire\0", "config", "Comment.nvim")
-time([[Config for Comment.nvim]], false)
--- Config for: windline.nvim
-time([[Config for windline.nvim]], true)
-require('plugins.configs.statusline')
-time([[Config for windline.nvim]], false)
+-- Setup for: nvim-tree.lua
+time([[Setup for nvim-tree.lua]], true)
+try_loadstring("\27LJ\2\n>\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\rnvimtree\18core.mappings\frequire\0", "setup", "nvim-tree.lua")
+time([[Setup for nvim-tree.lua]], false)
+time([[packadd for nvim-tree.lua]], true)
+vim.cmd [[packadd nvim-tree.lua]]
+time([[packadd for nvim-tree.lua]], false)
+-- Setup for: bufferline.nvim
+time([[Setup for bufferline.nvim]], true)
+try_loadstring("\27LJ\2\n@\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\15bufferline\18core.mappings\frequire\0", "setup", "bufferline.nvim")
+time([[Setup for bufferline.nvim]], false)
+time([[packadd for bufferline.nvim]], true)
+vim.cmd [[packadd bufferline.nvim]]
+time([[packadd for bufferline.nvim]], false)
+-- Setup for: Comment.nvim
+time([[Setup for Comment.nvim]], true)
+try_loadstring("\27LJ\2\n=\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\fcomment\18core.mappings\frequire\0", "setup", "Comment.nvim")
+time([[Setup for Comment.nvim]], false)
+time([[packadd for Comment.nvim]], true)
+vim.cmd [[packadd Comment.nvim]]
+time([[packadd for Comment.nvim]], false)
+-- Setup for: telescope-media-files.nvim
+time([[Setup for telescope-media-files.nvim]], true)
+try_loadstring("\27LJ\2\nE\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\20telescope_media\18core.mappings\frequire\0", "setup", "telescope-media-files.nvim")
+time([[Setup for telescope-media-files.nvim]], false)
+time([[packadd for telescope-media-files.nvim]], true)
+vim.cmd [[packadd telescope-media-files.nvim]]
+time([[packadd for telescope-media-files.nvim]], false)
+-- Setup for: CodeRunner.nvim
+time([[Setup for CodeRunner.nvim]], true)
+try_loadstring("\27LJ\2\n@\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\15codeRunner\18core.mappings\frequire\0", "setup", "CodeRunner.nvim")
+time([[Setup for CodeRunner.nvim]], false)
+time([[packadd for CodeRunner.nvim]], true)
+vim.cmd [[packadd CodeRunner.nvim]]
+time([[packadd for CodeRunner.nvim]], false)
 -- Config for: CodeRunner.nvim
 time([[Config for CodeRunner.nvim]], true)
-try_loadstring("\27LJ\2\n-\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0\14luafile %\bcmd\bvimí\1\1\0\5\0\f\0\0156\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\6\0005\3\3\0003\4\4\0=\4\5\3=\3\a\0025\3\b\0005\4\t\0=\4\n\3=\3\v\2B\0\2\1K\0\1\0\nstyle\vlayout\1\0\4\6x\4\0€€€ÿ\3\vheight\4š³æÌ\t™³¦ÿ\3\6y\4\0€€€ÿ\3\nwidth\4š³æÌ\t™³¦ÿ\3\1\0\2\fbgcolor\tNONE\vborder\frounded\ntasks\1\0\0\blua\0\1\0\2\vpython\18python <file>\6c\tmake\nsetup\15CodeRunner\frequire\0", "config", "CodeRunner.nvim")
+require('plugins.configs.others').codeRunner()
 time([[Config for CodeRunner.nvim]], false)
 -- Config for: indent-blankline.nvim
 time([[Config for indent-blankline.nvim]], true)
 require('plugins.configs.others').blankline()
 time([[Config for indent-blankline.nvim]], false)
--- Config for: nvim-tree.lua
-time([[Config for nvim-tree.lua]], true)
-require('plugins.configs.nvimtree')
-time([[Config for nvim-tree.lua]], false)
 -- Config for: bufferline.nvim
 time([[Config for bufferline.nvim]], true)
 require('plugins.configs.bufferline')
 time([[Config for bufferline.nvim]], false)
+-- Config for: Comment.nvim
+time([[Config for Comment.nvim]], true)
+try_loadstring("\27LJ\2\n5\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\fComment\frequire\0", "config", "Comment.nvim")
+time([[Config for Comment.nvim]], false)
+-- Config for: nvim-tree.lua
+time([[Config for nvim-tree.lua]], true)
+require('plugins.configs.nvimtree')
+time([[Config for nvim-tree.lua]], false)
+-- Config for: windline.nvim
+time([[Config for windline.nvim]], true)
+require('plugins.configs.statusline')
+time([[Config for windline.nvim]], false)
 
 -- Command lazy-loads
 time([[Defining lazy-load commands]], true)
@@ -507,10 +507,10 @@ vim.cmd [[augroup packer_load_aucmds]]
 vim.cmd [[au!]]
   -- Event lazy-loads
 time([[Defining lazy-load event autocommands]], true)
-vim.cmd [[au BufReadPre * ++once lua require("packer.load")({'nvim-lspconfig'}, { event = "BufReadPre *" }, _G.packer_plugins)]]
 vim.cmd [[au VimEnter * ++once lua require("packer.load")({'packer.nvim'}, { event = "VimEnter *" }, _G.packer_plugins)]]
-vim.cmd [[au BufRead * ++once lua require("packer.load")({'nvim-treesitter', 'nvim-ts-rainbow'}, { event = "BufRead *" }, _G.packer_plugins)]]
+vim.cmd [[au BufReadPre * ++once lua require("packer.load")({'nvim-lspconfig'}, { event = "BufReadPre *" }, _G.packer_plugins)]]
 vim.cmd [[au InsertEnter * ++once lua require("packer.load")({'nvim-cmp'}, { event = "InsertEnter *" }, _G.packer_plugins)]]
+vim.cmd [[au BufRead * ++once lua require("packer.load")({'nvim-treesitter', 'nvim-ts-rainbow'}, { event = "BufRead *" }, _G.packer_plugins)]]
 time([[Defining lazy-load event autocommands]], false)
 vim.cmd("augroup END")
 if should_profile then save_profiles() end
