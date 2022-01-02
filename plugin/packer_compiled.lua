@@ -424,27 +424,6 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Setup for: telescope.nvim
-time([[Setup for telescope.nvim]], true)
-try_loadstring("\27LJ\2\n?\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\14telescope\18core.mappings\frequire\0", "setup", "telescope.nvim")
-time([[Setup for telescope.nvim]], false)
-time([[packadd for telescope.nvim]], true)
-vim.cmd [[packadd telescope.nvim]]
-time([[packadd for telescope.nvim]], false)
--- Setup for: lazygit.nvim
-time([[Setup for lazygit.nvim]], true)
-try_loadstring("\27LJ\2\n=\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\flazygit\18core.mappings\frequire\0", "setup", "lazygit.nvim")
-time([[Setup for lazygit.nvim]], false)
-time([[packadd for lazygit.nvim]], true)
-vim.cmd [[packadd lazygit.nvim]]
-time([[packadd for lazygit.nvim]], false)
--- Setup for: nvim-tree.lua
-time([[Setup for nvim-tree.lua]], true)
-try_loadstring("\27LJ\2\n>\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\rnvimtree\18core.mappings\frequire\0", "setup", "nvim-tree.lua")
-time([[Setup for nvim-tree.lua]], false)
-time([[packadd for nvim-tree.lua]], true)
-vim.cmd [[packadd nvim-tree.lua]]
-time([[packadd for nvim-tree.lua]], false)
 -- Setup for: bufferline.nvim
 time([[Setup for bufferline.nvim]], true)
 try_loadstring("\27LJ\2\n@\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\15bufferline\18core.mappings\frequire\0", "setup", "bufferline.nvim")
@@ -459,13 +438,20 @@ time([[Setup for Comment.nvim]], false)
 time([[packadd for Comment.nvim]], true)
 vim.cmd [[packadd Comment.nvim]]
 time([[packadd for Comment.nvim]], false)
--- Setup for: telescope-media-files.nvim
-time([[Setup for telescope-media-files.nvim]], true)
-try_loadstring("\27LJ\2\nE\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\20telescope_media\18core.mappings\frequire\0", "setup", "telescope-media-files.nvim")
-time([[Setup for telescope-media-files.nvim]], false)
-time([[packadd for telescope-media-files.nvim]], true)
-vim.cmd [[packadd telescope-media-files.nvim]]
-time([[packadd for telescope-media-files.nvim]], false)
+-- Setup for: telescope.nvim
+time([[Setup for telescope.nvim]], true)
+try_loadstring("\27LJ\2\n?\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\14telescope\18core.mappings\frequire\0", "setup", "telescope.nvim")
+time([[Setup for telescope.nvim]], false)
+time([[packadd for telescope.nvim]], true)
+vim.cmd [[packadd telescope.nvim]]
+time([[packadd for telescope.nvim]], false)
+-- Setup for: nvim-tree.lua
+time([[Setup for nvim-tree.lua]], true)
+try_loadstring("\27LJ\2\n>\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\rnvimtree\18core.mappings\frequire\0", "setup", "nvim-tree.lua")
+time([[Setup for nvim-tree.lua]], false)
+time([[packadd for nvim-tree.lua]], true)
+vim.cmd [[packadd nvim-tree.lua]]
+time([[packadd for nvim-tree.lua]], false)
 -- Setup for: CodeRunner.nvim
 time([[Setup for CodeRunner.nvim]], true)
 try_loadstring("\27LJ\2\n@\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\15codeRunner\18core.mappings\frequire\0", "setup", "CodeRunner.nvim")
@@ -473,18 +459,24 @@ time([[Setup for CodeRunner.nvim]], false)
 time([[packadd for CodeRunner.nvim]], true)
 vim.cmd [[packadd CodeRunner.nvim]]
 time([[packadd for CodeRunner.nvim]], false)
--- Config for: CodeRunner.nvim
-time([[Config for CodeRunner.nvim]], true)
-require('plugins.configs.others').codeRunner()
-time([[Config for CodeRunner.nvim]], false)
--- Config for: indent-blankline.nvim
-time([[Config for indent-blankline.nvim]], true)
-require('plugins.configs.others').blankline()
-time([[Config for indent-blankline.nvim]], false)
--- Config for: bufferline.nvim
-time([[Config for bufferline.nvim]], true)
-require('plugins.configs.bufferline')
-time([[Config for bufferline.nvim]], false)
+-- Setup for: lazygit.nvim
+time([[Setup for lazygit.nvim]], true)
+try_loadstring("\27LJ\2\n=\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\flazygit\18core.mappings\frequire\0", "setup", "lazygit.nvim")
+time([[Setup for lazygit.nvim]], false)
+time([[packadd for lazygit.nvim]], true)
+vim.cmd [[packadd lazygit.nvim]]
+time([[packadd for lazygit.nvim]], false)
+-- Setup for: telescope-media-files.nvim
+time([[Setup for telescope-media-files.nvim]], true)
+try_loadstring("\27LJ\2\nE\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\20telescope_media\18core.mappings\frequire\0", "setup", "telescope-media-files.nvim")
+time([[Setup for telescope-media-files.nvim]], false)
+time([[packadd for telescope-media-files.nvim]], true)
+vim.cmd [[packadd telescope-media-files.nvim]]
+time([[packadd for telescope-media-files.nvim]], false)
+-- Config for: windline.nvim
+time([[Config for windline.nvim]], true)
+require('plugins.configs.statusline')
+time([[Config for windline.nvim]], false)
 -- Config for: Comment.nvim
 time([[Config for Comment.nvim]], true)
 try_loadstring("\27LJ\2\n5\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\fComment\frequire\0", "config", "Comment.nvim")
@@ -493,10 +485,18 @@ time([[Config for Comment.nvim]], false)
 time([[Config for nvim-tree.lua]], true)
 require('plugins.configs.nvimtree')
 time([[Config for nvim-tree.lua]], false)
--- Config for: windline.nvim
-time([[Config for windline.nvim]], true)
-require('plugins.configs.statusline')
-time([[Config for windline.nvim]], false)
+-- Config for: indent-blankline.nvim
+time([[Config for indent-blankline.nvim]], true)
+require('plugins.configs.others').blankline()
+time([[Config for indent-blankline.nvim]], false)
+-- Config for: CodeRunner.nvim
+time([[Config for CodeRunner.nvim]], true)
+require('plugins.configs.others').codeRunner()
+time([[Config for CodeRunner.nvim]], false)
+-- Config for: bufferline.nvim
+time([[Config for bufferline.nvim]], true)
+require('plugins.configs.bufferline')
+time([[Config for bufferline.nvim]], false)
 
 -- Command lazy-loads
 time([[Defining lazy-load commands]], true)
@@ -507,10 +507,10 @@ vim.cmd [[augroup packer_load_aucmds]]
 vim.cmd [[au!]]
   -- Event lazy-loads
 time([[Defining lazy-load event autocommands]], true)
-vim.cmd [[au VimEnter * ++once lua require("packer.load")({'packer.nvim'}, { event = "VimEnter *" }, _G.packer_plugins)]]
 vim.cmd [[au BufReadPre * ++once lua require("packer.load")({'nvim-lspconfig'}, { event = "BufReadPre *" }, _G.packer_plugins)]]
-vim.cmd [[au InsertEnter * ++once lua require("packer.load")({'nvim-cmp'}, { event = "InsertEnter *" }, _G.packer_plugins)]]
+vim.cmd [[au VimEnter * ++once lua require("packer.load")({'packer.nvim'}, { event = "VimEnter *" }, _G.packer_plugins)]]
 vim.cmd [[au BufRead * ++once lua require("packer.load")({'nvim-treesitter', 'nvim-ts-rainbow'}, { event = "BufRead *" }, _G.packer_plugins)]]
+vim.cmd [[au InsertEnter * ++once lua require("packer.load")({'nvim-cmp'}, { event = "InsertEnter *" }, _G.packer_plugins)]]
 time([[Defining lazy-load event autocommands]], false)
 vim.cmd("augroup END")
 if should_profile then save_profiles() end
