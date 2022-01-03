@@ -19,7 +19,7 @@ hooks.add("setup_mappings", function(map)
   map.n("<C-a>", "gg0vG$", opt)
   map.n("<C-s>", ":w<CR>", opt)
   map.n("<C-q>", ":q<CR>", opt)
-  map.n("<esc><esc>", ":nohlsearch<CR>", opt)
+  -- map.n("<esc><esc>", ":nohlsearch<CR>", opt)
   map.n("<F1>", "", opt)
 
 end)
