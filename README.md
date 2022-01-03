@@ -7,3 +7,8 @@
 + `c` 拷贝
 + `p` 粘贴
 + `d` 删除
+
+
+# 兼容neovide编辑器
+> neovide Github
+> https://github.com/neovide/neovide
