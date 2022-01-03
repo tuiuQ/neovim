@@ -26,7 +26,7 @@ M.misc = function()
 
   local function plugins_mappings()
     local misc = maps.misc
-    map.n(misc.close_bufferm, ":lua require('core.utils').close_buffer()<CR>")
+    map.n(misc.close_buffer, ":lua require('core.utils').close_buffer()<CR>")
     map.n(misc.new_buffer, ":enew<CR>")
     map.n(misc.new_tab, ":tabnew<CR>")
     map.n(misc.line_number_toggle, ":set nu!<CR>")
